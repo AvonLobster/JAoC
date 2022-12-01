@@ -24,6 +24,7 @@ public class PuzzleInput {
             }
 
             builder.deleteCharAt(builder.length() - 1);
+            builder.deleteCharAt(builder.length() - 1);
             reader.close();
             input = builder.toString();
         } catch (IOException e) {

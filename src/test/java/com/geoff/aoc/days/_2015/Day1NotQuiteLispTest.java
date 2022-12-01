@@ -1,4 +1,4 @@
-package com.geoff.aoc._2015;
+package com.geoff.aoc.days._2015;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
