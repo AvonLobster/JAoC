@@ -1,15 +1,19 @@
 package com.geoff.aoc.util;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 public class PuzzleInput {
     public static String readPuzzleInput(int year, int day) {
+        Resource resource = new ClassPathResource(year + "\\" + day + ".txt");
         String input = "";
         
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\carls\\source\\JAoC\\src\\main\\resources\\" + year + "\\" + day + ".txt"));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
             StringBuilder builder = new StringBuilder();
             String line = null;
             String eol = System.getProperty("line.separator");
