@@ -33,4 +33,10 @@ public class PuzzleInput {
 
         return input;
     }
+
+    public static String[] splitInputByNewLine(String input) {
+        input = input.replaceAll("\\r", "");
+
+        return input.split("\n");
+    }
 }
